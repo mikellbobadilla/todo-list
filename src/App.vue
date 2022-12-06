@@ -101,8 +101,6 @@ async function updateTodo(todo) {
     fetchTodo()
     isLoadingUpdate.value = false
     modalForm.show = false
-    showAlert('Todo Updated!', 'info')
-    setTimeout(() => alert.show = false, 5000)
   } catch (err) {
     showAlert(err.message, 'danger')
   }
@@ -122,8 +120,7 @@ fetchTodo()
       <template #header>
         <h2>Update Todo</h2>
       </template>
-
-
+      
       <template #content>
         <Spinner v-if="isLoadingUpdate" />
         <div v-else>
@@ -183,6 +180,7 @@ fetchTodo()
 .todo-update {
   display: flex;
   flex-direction: column;
+  width: 70%;
 }
 
 .todo-update label {

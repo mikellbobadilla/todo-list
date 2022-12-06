@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="modal" class="modal">
+  <div ref="modal" class="modal" v-show="show" >
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
