@@ -8,6 +8,7 @@
     <div class="link">
       <ul>
         <li><RouterLink to="/">Home</RouterLink></li>
+        <li><RouterLink to="/todo/add">Add Todo</RouterLink></li>
         <li><RouterLink to="/about">About</RouterLink></li>
       </ul>
     </div>

@@ -8,6 +8,14 @@ const props = defineProps({
     type: String,
     required: true,
     default: ''
+  },
+  description: {
+    type: String,
+    default: ''
+  },
+  date: {
+    type: String,
+    default: ''
   }
 })
 
@@ -17,7 +25,11 @@ const emit = defineEmits(['remove', 'update'])
 
 <template>
   <div class="todo">
-    <p> {{ title }} </p>
+    <div class="content">
+      <p> {{ title }} </p>
+      <p> {{ description }} </p>
+      <p> {{ date }} </p>
+    </div>
 
     <div class="actions">
       <Btn @click.prenver="emit('update')" color="warning" variant="circle">
@@ -42,6 +54,12 @@ const emit = defineEmits(['remove', 'update'])
   padding: 10px 20px;
   background-color: transparent;
   border-radius: 10px;
+}
+
+.content{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .actions {
